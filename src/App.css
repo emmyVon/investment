@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
+  display: grid;
+  place-items: center;
   min-height: 100vh;
+}
+.dashboard{
+  background-color: white;
+  border-radius: 16px;
+  padding: 4px;
+}
+.dash-container{
+  background-color: rgb(252, 252, 252);
+  border-radius: 16px;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  position: relative;
+}
+/* .sidebar-top h2{
+  font-size: 11px;
+} */
+
+.top-bg{
+  position: absolute;
+  background-color: lightgrey;
+  height: 10rem;
+  width: 85%;
+  top: 0;
+  right: 0;
+  border-radius: 0 16px 0 32px;
+}
+.main{
+  justify-self: end;
+  width: 100%;
+  z-index: 3;
+}
+aside{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar-middel{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.sidebar-middel li{
+  display: flex;
   align-items: center;
+}
+.dash-list::after{
+  content: '';
+  height: 2px;
+  width: 5px;
+  background-color: red;
+}
+.main-nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1.5rem;
+}
+article{
+  border-radius: 10px;
+  padding: 16px;
+}
+.top-charts{
+  display: grid;
+  grid-template-columns: 30% 55%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.top-charts article{
+  background-color: white;
+  box-shadow: 2px 3px 5px grey;
+}
+.upgrade{
+  height: 100%;
+  position: relative;
+}
+.upgrade img{
+  height: 8rem;
+  position: absolute;
+  top: 30%;
+  left: -20px;
+  width: 12rem;
+}
+.upgrade>div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.bg-area{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  justify-self: flex-end;
+}
+.port-val>div:nth-child(2){
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+.port-val>div:nth-child(1){
+  display: flex;
+  justify-content: space-between;
+}
+.date-interval{
+  display: flex;
+  gap: 1.5rem;
+}
+.port-val .right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.history-art{
+  display: flex;
+  gap: 1.5rem;
+}
+.port-history{
+  margin-bottom: 2rem;
+}
+.port-history >div:nth-child(1){
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+.port-history article{
+  border: 3px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15rem;
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+}
+footer>div{
+  display: flex;
+  gap: 0.9rem;
+}
+footer>div:nth-child(1){
+  flex-direction: column;
+}
+footer h4{
+  font-size: 11px;
+  color: lightgray;
+}
+footer h2{
+  font-size: 13px;
+}
+footer>div >div{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: end;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
